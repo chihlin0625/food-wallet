@@ -33,14 +33,20 @@
         </button>
 
         <div id="settingsPanel" class="hidden bg-purple-50 border-b border-purple-100 p-6 animate-fade-in-down">
-            <label class="block text-xs font-bold text-purple-600 uppercase mb-2">設定每週固定預算</label>
-            <div class="flex space-x-2">
-                <input id="totalBudgetInput" type="number" 
-                    class="flex-1 p-2 bg-white border-2 border-purple-200 rounded-lg text-lg font-bold text-purple-700 focus:outline-none focus:border-purple-500">
-                <button onclick="updateTotalBudget()" class="px-4 py-2 bg-purple-600 text-white rounded-lg font-bold text-sm shadow-md hover:bg-purple-700 transition-colors">儲存</button>
-            </div>
-            <p class="text-[10px] text-purple-400 mt-2 italic">* 修改後將即時生效。如需特別行程（如國旅），可在這裡臨時調高。</p>
-        </div>
+    <label class="block text-xs font-bold text-purple-600 uppercase mb-2">設定每週固定預算</label>
+    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+        <input id="totalBudgetInput" type="number" 
+            class="w-full sm:flex-1 p-3 bg-white border-2 border-purple-200 rounded-lg text-lg font-bold text-purple-700 focus:outline-none focus:border-purple-500"
+            placeholder="輸入預算">
+        <button onclick="updateTotalBudget()" 
+            class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white rounded-lg font-bold shadow-md active:bg-purple-700 transition-colors">
+            儲存設定
+        </button>
+    </div>
+    <p class="text-[10px] text-purple-400 mt-3 italic leading-relaxed">
+        * 修改後將即時生效。如需特別行程（如國旅），可在這裡臨時調高。
+    </p>
+</div>
         
         <div id="statusCard" class="bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-8 text-center transition-all duration-500">
             <p class="text-purple-100 text-sm font-medium tracking-wider uppercase mb-1">本週剩餘預算</p>
